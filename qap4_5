@@ -1,0 +1,25 @@
+function MotelCustomer(name, birthDate, gender, roomPreferences, paymentMethod, mailingAddress, phoneNumber, checkInDate, checkOutDate) {
+    this.name = name;
+    this.birthDate = birthDate;
+    this.gender = gender;
+    this.roomPreferences = roomPreferences;
+    this.paymentMethod = paymentMethod;
+    this.mailingAddress = mailingAddress;
+    this.phoneNumber = phoneNumber;
+    this.checkInDate = checkInDate;
+    this.checkOutDate = checkOutDate;
+}
+
+const customer = new MotelCustomer(
+    'Alex Tester',
+    '2000-01-01',
+    'Male',
+    ['Non-Smoking', 'King Bed'],
+    'Credit Card',
+    { street: '123 Main St', city: 'LA', state: 'CA', zip: '12345' },
+    '555-1234',
+    '2023-12-01',
+    '2023-12-07'
+);
+
+console.log(customer.generateDescription());
